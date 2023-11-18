@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Geologica&family=Nanum+Pen+Script&family=Reem+Kufi+Fun:wght@400;500;600;700&family=Work+Sans:ital,wght@0,200;0,300;1,200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("./components/xo.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100% !important;
+  color: #ddd !important;
+  font-family: "Agbalumo", sans-serif !important;
+
+}
+.save-btn {
+  width: 45%;
+  margin-left: 27%;
+}
+table {
+  border-collapse: collapse;
+  width: 300px;
+  background-color: #655CC9 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center !important;
+  
+}
+
+th {
+  background-color: #5248438c !important;
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+td{
+  font-size: 25px ;
+  background-color: #90837E !important;
+}
