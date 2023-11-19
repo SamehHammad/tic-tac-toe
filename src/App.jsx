@@ -9,6 +9,7 @@ function App() {
   const [nameO, setNameO] = useState("");
   const [started, setStarted] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const [round, setRound] = useState(1);
 
   const handleNames = () => {
     setClicked(true);
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <>
-      <h1 className="header ">𝕋𝕚𝕔 𝕋𝕒𝕔 𝕋𝕠𝕖</h1>;
+      <h1 className="header mt-3 ">𝕋𝕚𝕔 𝕋𝕒𝕔 𝕋𝕠𝕖</h1>
       <div className="app-container">
         {!started ? (
           <div className="inputs-container d-flex justify-content-center">
@@ -74,7 +75,16 @@ function App() {
         )}
         {started && (
           <div className="game-container">
-            <Game nameX={nameX} nameO={nameO} />
+            <h1 className="round ">
+              Round : <span className="oscore">{round}</span>
+            </h1>
+            ;
+            <Game
+              nameX={nameX}
+              nameO={nameO}
+              setRound={setRound}
+              round={round}
+            />
           </div>
         )}
       </div>

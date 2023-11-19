@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import { IoIosRefresh } from "react-icons/io";
 import winImg from "../components/win.png";
 
-const Game = ({ nameX, nameO }) => {
+const Game = ({ nameX, nameO, setRound, round }) => {
   const initialBoard = [
     ["", "", ""],
     ["", "", ""],
@@ -133,8 +133,9 @@ const Game = ({ nameX, nameO }) => {
           imageAlt: "Custom image",
         });
       }, 100);
+      setRound(round + 1);
       setScore({ ...score, xScore: 0, oScore: 0 });
-    } else if (score.oScore == 6) {
+    } else if (score.oScore == 5) {
       setTimeout(() => {
         Swal.fire({
           title: `🏆 Congratulations 🏆`,
@@ -145,12 +146,13 @@ const Game = ({ nameX, nameO }) => {
           imageAlt: "Custom image",
         });
       }, 100);
+      setRound(round + 1);
       setScore({ ...score, xScore: 0, oScore: 0 });
     }
+    setTimeout(restart, 2000);
   };
 
   const restart = () => {
-   
     setBoard(initialBoard);
     setGameOver(false);
     setWinningCells([]);
