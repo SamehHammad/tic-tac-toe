@@ -103,7 +103,7 @@ const Game = ({ nameX, nameO }) => {
         title: "DRAW!",
         text: `It's a draw!`,
         imageUrl: "https://img.youm7.com/large/smal4201013155625.jpg",
-        imageWidth: 400,
+        imageWidth: 200,
         imageHeight: 200,
         imageAlt: "Custom image",
       });
@@ -122,33 +122,35 @@ const Game = ({ nameX, nameO }) => {
         oScore: prevScore.oScore + 1,
       }));
     }
-    if (score.xScore == 25) {
+    if (score.xScore == 5) {
       setTimeout(() => {
         Swal.fire({
           title: `🏆 Congratulations 🏆`,
           html: `<p style="color:#970140;font-size:25px;">  ${nameX}  won the round! </p>`,
           imageUrl: winImg,
-          imageWidth: 400,
+          imageWidth: 200,
           imageHeight: 200,
           imageAlt: "Custom image",
         });
-     
-      }, 1000);
-    } else if (score.oScore == 25) {
+      }, 100);
+      setScore({ ...score, xScore: 0, oScore: 0 });
+    } else if (score.oScore == 6) {
       setTimeout(() => {
         Swal.fire({
           title: `🏆 Congratulations 🏆`,
           html: `<p style="color:#970140;font-size:25px;">  ${nameO}  won the round! </p>`,
           imageUrl: winImg,
-          imageWidth: 400,
+          imageWidth: 200,
           imageHeight: 200,
           imageAlt: "Custom image",
         });
-      }, 1000);
+      }, 100);
+      setScore({ ...score, xScore: 0, oScore: 0 });
     }
   };
 
   const restart = () => {
+   
     setBoard(initialBoard);
     setGameOver(false);
     setWinningCells([]);

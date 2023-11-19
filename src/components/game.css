@@ -28,6 +28,7 @@
 .swal2-modal{
   background-color: black;
   color: #FFB900;
+  
 }
 .retry-btn {
   background-color: #0A0914 !important;
@@ -63,9 +64,13 @@
   transform: translateX(-50%);
   z-index: 1;
 }
-.xscore {
-  color: #90ee90 !important;
+.xscore { 
+  color: #eff7ef !important;
+  text-shadow: 0 0 5px #ffff00, 0 0 5px #ff0000, 0 0 1px #ff6200,
+  0 0 2px #ff0000;
 }
 .oscore {
-  color: lightblue !important;
+  color: rgb(249, 250, 250) !important;
+  text-shadow: 0 0 5px #ffff00, 0 0 5px #00ff00, 0 0 1px #00ff00,
+  0 0 1px #00ff00;
 }

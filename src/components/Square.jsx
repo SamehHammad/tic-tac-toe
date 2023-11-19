@@ -35,9 +35,7 @@ const Square = ({
           : "glow-o"
       }`}
       onClick={handleClick}
-      style={{
-        color: "light" + (board[rowIndex][colIndex] === "X" ? "green" : "blue"),
-      }}
+    
     >
       <h1> {board[rowIndex][colIndex]}</h1>
     </div>
