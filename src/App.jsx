@@ -20,62 +20,65 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      {!started ? (
-        <div className="inputs-container d-flex justify-content-center">
-          <Form>
-            <Form.Group controlId="playerX" className="m-3">
-              <Form.Control
-                type="text"
-                value={nameX}
-                onChange={(e) => setNameX(e.target.value)}
-                placeholder="Enter X player name"
-                className={!nameX && clicked ? "is-invalid " : ""}
-              />
-              {!nameX && clicked ? (
-                <Form.Control.Feedback type="invalid">
-                  Please enter X player name.
-                </Form.Control.Feedback>
-              ) : (
-                ""
-              )}
-            </Form.Group>
+    <>
+      <h1 className="header ">𝕋𝕚𝕔 𝕋𝕒𝕔 𝕋𝕠𝕖</h1>;
+      <div className="app-container">
+        {!started ? (
+          <div className="inputs-container d-flex justify-content-center">
+            <Form>
+              <Form.Group controlId="playerX" className="m-3">
+                <Form.Control
+                  type="text"
+                  value={nameX}
+                  onChange={(e) => setNameX(e.target.value)}
+                  placeholder="Enter X player name"
+                  className={`${
+                    !nameX && clicked ? "is-invalid " : ""
+                  }custom-input-style`}
+                />
+                {!nameX && clicked && (
+                  <Form.Control.Feedback type="invalid">
+                    Please enter X player name.
+                  </Form.Control.Feedback>
+                )}
+              </Form.Group>
 
-            <Form.Group controlId="playerO" className="m-3">
-              <Form.Control
-                type="text"
-                value={nameO}
-                onChange={(e) => setNameO(e.target.value)}
-                placeholder="Enter O player name"
-                className={!nameO && clicked ? "is-invalid " : ""}
-              />
-              {!nameO && clicked ? (
-                <Form.Control.Feedback type="invalid">
-                  Please enter O player name.
-                </Form.Control.Feedback>
-              ) : (
-                ""
-              )}
-            </Form.Group>
+              <Form.Group controlId="playerO" className="m-3">
+                <Form.Control
+                  type="text"
+                  value={nameO}
+                  onChange={(e) => setNameO(e.target.value)}
+                  placeholder="Enter O player name"
+                  className={`${
+                    !nameO && clicked ? "is-invalid " : ""
+                  }custom-input-style`}
+                />
+                {!nameO && clicked && (
+                  <Form.Control.Feedback type="invalid">
+                    Please enter O player name.
+                  </Form.Control.Feedback>
+                )}
+              </Form.Group>
 
-            <Button
-              variant="primary"
-              onClick={handleNames}
-              className="save-btn "
-            >
-              Save
-            </Button>
-          </Form>
-        </div>
-      ) : (
-        ""
-      )}
-      {started && (
-        <div className="game-container">
-          <Game nameX={nameX} nameO={nameO} />
-        </div>
-      )}
-    </div>
+              <Button
+                variant="primary"
+                onClick={handleNames}
+                className="save-btn"
+              >
+                Save
+              </Button>
+            </Form>
+          </div>
+        ) : (
+          ""
+        )}
+        {started && (
+          <div className="game-container">
+            <Game nameX={nameX} nameO={nameO} />
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 

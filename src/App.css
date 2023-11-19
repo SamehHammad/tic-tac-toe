@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Geologica&family=Nanum+Pen+Script&family=Reem+Kufi+Fun:wght@400;500;600;700&family=Work+Sans:ital,wght@0,200;0,300;1,200&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Geologica&family=Nanum+Pen+Script&family=Reem+Kufi+Fun:wght@400;500;600;700&family=Signika:wght@300;400&family=Work+Sans:ital,wght@0,200;0,300;1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Geologica&family=Nanum+Pen+Script&family=Reem+Kufi+Fun:wght@400;500;600;700&family=Signika:wght@300;400&family=Work+Sans:ital,wght@0,200;0,300;1,200&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,17 +16,35 @@ body {
   color: #ddd !important;
   font-family: "Signika", sans-serif !important;
 }
+
+.game {
+  margin: auto;
+}
+
 .save-btn {
-  width: 45%;
-  margin-left: 27%;
+  width: 55%;
+  margin-left: 24%;
+  background-color: #0b0a16 !important;
+}
+.custom-input-style {
+  border-color: #0b0a16 !important;
+  background-color: #0b0a163d !important;
+  color: #3b0252 !important;
 }
 table {
   border-collapse: collapse;
-  width: 300px;
   background-color: #655cc9 !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.header {
+  font-family: Arial, sans-serif;
+  color: #0b0a16;
+  text-align: center;
+  text-shadow: 2px 2px 4px #666;
+  letter-spacing: 3px;
+  font-size: 55px;
+  font-weight: 950;
+}
 th,
 td {
   padding: 10px;
@@ -37,10 +55,11 @@ th {
   background-color: #000000e3 !important;
   letter-spacing: 2px;
   font-size: 25px;
+  width: 150px;
 }
 td {
   font-size: 25px;
-  background-color: #000000e3 !important;
+  background-color: #000000cb !important;
 }
 
 .glow-x {
