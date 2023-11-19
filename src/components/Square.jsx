@@ -27,7 +27,13 @@ const Square = ({
 
   return (
     <div
-      className={`cell ${isWinningCell ? "winning-cell" : ""}`}
+      className={`cell ${
+        isWinningCell
+          ? "winning-cell glow-x glow-o"
+          : board[rowIndex][colIndex] === "X"
+          ? "glow-x"
+          : "glow-o"
+      }`}
       onClick={handleClick}
       style={{
         color: "light" + (board[rowIndex][colIndex] === "X" ? "green" : "blue"),

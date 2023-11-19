@@ -11,23 +11,29 @@
   position: relative;
   width: 70px;
   height: 70px;
-  background-color: rgb(114, 110, 110);
+  background-color: #0A0914;
   margin: 5px 5px;
   cursor: pointer;
   padding-bottom: 5px;
   transform: translateY(10%);
-  box-shadow: 7px 5px 12px 5px #00000063;
   text-shadow: 5px 5px 5px #0000008f;
   font-family: "Nanum Pen Script", "cursive";
 }
 .cell h1 {
   position: absolute;
   font-size: 100px;
-  top: -25px;
-  right: 7px;
+  top: -24px;
+  right: 9px;
+}
+.swal2-modal{
+  background-color: black;
+  color: #FFB900;
 }
 .retry-btn {
-  background-color: #655CC9 !important;
+  background-color: #0A0914 !important;
+  font-size: 40px;
+  cursor: pointer;
+  padding: 5px 0;
 }
 .winning-cell {
   background-color: rgb(8, 173, 35);
@@ -49,8 +55,8 @@
 .winning-cell::after {
   content: "";
   position: absolute;
-  background-color: red; /* You can set the color of the line */
-  width: 3px; /* Adjust the width of the line as needed */
+  background-color: red; 
+  width: 3px;
   height: 100%;
   top: 0;
   left: 50%;

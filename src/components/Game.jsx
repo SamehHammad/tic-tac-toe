@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./game.css";
 import Square from "./Square";
-import { Button, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import Swal from "sweetalert2";
+import { IoIosRefresh } from "react-icons/io";
+import winImg from "../components/win.png";
 
 const Game = ({ nameX, nameO }) => {
   const initialBoard = [
@@ -120,18 +122,30 @@ const Game = ({ nameX, nameO }) => {
         oScore: prevScore.oScore + 1,
       }));
     }
-    setTimeout( ()=> {
-      Swal.fire({
-        title: `${winner === "X" ? nameX : nameO} wins!!`,
-        html: `<p style="color:#970140;font-size:25px;">Your Score now is ( <span style="color:red;font-size:25px;">${
-          winner === "X" ? score.xScore + 1 : score.oScore + 1
-        }</span> )</p>`,
-        imageUrl: "https://myhfa.org/wp-content/uploads/2017/06/Winner.jpg",
-        imageWidth: 400,
-        imageHeight: 200,
-        imageAlt: "Custom image",
-      })
-   },1000)
+    if (score.xScore == 25) {
+      setTimeout(() => {
+        Swal.fire({
+          title: `🏆 Congratulations 🏆`,
+          html: `<p style="color:#970140;font-size:25px;">  ${nameX}  won the round! </p>`,
+          imageUrl: winImg,
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: "Custom image",
+        });
+     
+      }, 1000);
+    } else if (score.oScore == 25) {
+      setTimeout(() => {
+        Swal.fire({
+          title: `🏆 Congratulations 🏆`,
+          html: `<p style="color:#970140;font-size:25px;">  ${nameO}  won the round! </p>`,
+          imageUrl: winImg,
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: "Custom image",
+        });
+      }, 1000);
+    }
   };
 
   const restart = () => {
@@ -176,9 +190,7 @@ const Game = ({ nameX, nameO }) => {
           ))
         )}
         <div className="btns mt-4 d-flex w-50">
-          <Button onClick={restart} className="w-100 retry-btn">
-            Again
-          </Button>
+          <IoIosRefresh onClick={restart} className="w-100 retry-btn" />
         </div>
       </div>
     </div>

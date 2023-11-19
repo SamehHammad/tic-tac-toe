@@ -14,7 +14,6 @@ body {
   width: 100% !important;
   color: #ddd !important;
   font-family: "Agbalumo", sans-serif !important;
-
 }
 .save-btn {
   width: 45%;
@@ -23,7 +22,7 @@ body {
 table {
   border-collapse: collapse;
   width: 300px;
-  background-color: #655CC9 !important;
+  background-color: #655cc9 !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -31,15 +30,62 @@ th,
 td {
   padding: 10px;
   text-align: center !important;
-  
 }
 
 th {
-  background-color: #5248438c !important;
+  background-color: #000000e3 !important;
   letter-spacing: 2px;
   font-size: 25px;
 }
-td{
-  font-size: 25px ;
-  background-color: #90837E !important;
+td {
+  font-size: 25px;
+  background-color: #000000e3 !important;
+}
+
+.glow-x {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  animation: glow-animation 1s infinite alternate;
+}
+
+@keyframes glow-animation {
+  0% {
+    text-shadow: 0 0 5px #ffff00, 0 0 5px #ff0000, 0 0 15px #ff6200,
+      0 0 20px #ff0000;
+  }
+
+  50% {
+    text-shadow: 0 0 10px #ffff00, 0 0 10px #ff0000, 0 0 30px #ff6200,
+      0 0 40px #ff0000;
+  }
+
+  100% {
+    text-shadow: 0 0 5px #ffff00, 0 0 5px #ff0000, 0 0 15px #ff6200,
+      0 0 20px #ff0000;
+  }
+}
+
+.glow-o {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  animation: glow-animation-green 1s infinite alternate;
+}
+
+@keyframes glow-animation-green {
+  0% {
+    text-shadow: 0 0 5px #ffff00, 0 0 5px #00ff00, 0 0 15px #00ff00,
+      0 0 20px #00ff00;
+  }
+
+  50% {
+    text-shadow: 0 0 10px #ffff00, 0 0 10px #00ff00, 0 0 30px #00ff00,
+      0 0 40px #00ff00;
+  }
+
+  100% {
+    text-shadow: 0 0 5px #ffff00, 0 0 5px #00ff00, 0 0 15px #00ff00,
+      0 0 20px #00ff00;
+  }
 }
