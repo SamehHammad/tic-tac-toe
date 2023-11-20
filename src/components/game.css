@@ -18,6 +18,9 @@
   text-shadow: 5px 5px 5px #0000008f;
   font-family: "Nanum Pen Script", "cursive";
 }
+.cell:hover {
+  background-color: #0a0914f1;
+}
 .cell h1 {
   position: absolute;
   font-size: 100px;
@@ -35,8 +38,6 @@
   padding: 5px 0;
 }
 
-
-
 .xscore {
   color: #e9e8f3 !important;
   text-shadow: 0 0 3px #e4e007, 0 0 5px #ff0000, 0 0 1px #ff0000,
@@ -50,16 +51,16 @@
 .winning-cell {
   background-color: rgb(8, 173, 35);
   position: relative;
-  animation: cell-animation-green 0.5s infinite ;
+  animation: cell-animation-green 0.5s infinite;
 }
 
 @keyframes cell-animation-green {
   0% {
     background-color: #0b0a16;
   }
-50%{
-  background-color: #FCCFB8;
-}
+  50% {
+    background-color: #fccfb8;
+  }
   100% {
     background-color: rgb(8, 173, 35);
   }

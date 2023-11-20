@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url("./components/xo.jpg");
+  background: url("./components/assets/xo.jpg");
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -25,7 +25,11 @@ body {
 
 }
 .round span{
-  color: #9fda57;
+  color: #1b0d08 !important;
+  border-radius: 50%;
+  border: 1px solid #141227;
+  padding: 5px 15px;
+  
 }
 .save-btn {
   width: 55%;
@@ -53,7 +57,6 @@ table {
 }
 th,
 td {
-  padding: 10px;
   text-align: center !important;
 }
 

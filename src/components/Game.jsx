@@ -4,7 +4,7 @@ import Square from "./Square";
 import { Table } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { IoIosRefresh } from "react-icons/io";
-import winImg from "../components/win.png";
+import winImg from "../components/assets/win.png";
 
 const Game = ({ nameX, nameO, setRound, round }) => {
   const initialBoard = [
